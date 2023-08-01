@@ -7,7 +7,7 @@ export function ButtonsSection({type, buttons}: {type: string, buttons: ButtonTe
     if (typeof btn === "string") {
       key = btn;
     } else {
-      key = btn.text;
+      key = btn[0].text;
     }
     return (
       <li key={key}><Button>{btn}</Button></li>

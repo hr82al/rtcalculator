@@ -1,7 +1,8 @@
-export type ButtonText = string | {
+type ExtendedButton = {
   text: string,
   jsx: JSX.Element
 }
+export type ButtonText = string | ExtendedButton[]
 
 export interface ActionType {
   type: ActionKind;
@@ -10,7 +11,11 @@ export interface ActionType {
 export interface ITaskContext {
   display: string;
   memory: string;
-  buffer: string;
+  lastop: string;
+  lastresult: string,
+  showresult: boolean,
+ // stack: (number | string)[]
+  fn: boolean;
 }
 
 
@@ -35,16 +40,21 @@ export enum ActionKind {
   "÷" = "/",
   "=" = "=",
   "CE" = "CE",
-  "SHIFT" = "SHIFT",
+  "FN1" = "FN1",
+  "FN2" = "FN2",
   "C" = "C",
   "SIN" = "SIN",
   "COS" = "COS",
   "TAN" = "TAN",
+  "ASIN" = "ASIN",
+  "ACOS" = "ACOS",
+  "ATAN" = "ATAN",
   "EXP" = "EXP",
-  "pow" = "pow",
+  "pow" = "**",
+  "YSQRTX" = "YSQRTX",
   "√" = "sqrt",
   "LN" = "LN",
   "LOG" = "LOG",
-  "(" = "(",
-  ")" = ")"
+  "X2" = "X2",
+  "1/x" = "1/x"
 }

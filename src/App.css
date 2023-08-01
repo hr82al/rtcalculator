@@ -17,9 +17,12 @@
   align-items: center;
   justify-content: end;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 1.83rem;
+  font-size: 1.62rem;
   text-align: right;
   color: black;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .calc-buttons ul {
@@ -80,4 +83,15 @@
 .basic-operations ul {
   display: grid;
   grid-template-columns:  1fr 1fr;
+}
+
+
+.panel {
+  background-color: lightslategrey;
+  padding: 0.5rem;
+}
+
+.btn {
+  background-color: rgb(23, 26, 30);
+  color: antiquewhite;
 }

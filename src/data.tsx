@@ -14,7 +14,23 @@ export const baseOperaions = [
   '=', 'CE'
 ];
 
-const pow = <span>X<sup><small>y</small></sup></span>;
+const pow = <span>x<sup><small>y</small></sup></span>;
 export const extendedOperations: ButtonText[] = [
-  'SHIFT', 'C', 'SIN', 'COS', 'TAN', 'EXP', {text: "pow", jsx: pow} , '√', 'LN', 'LOG', '(', ')'
+  [{text: "FN1", jsx: (<span>FN1</span>)},
+   {text: "FN2", jsx: (<span>FN2</span>)} 
+  ],
+  'C',
+  [{text: "SIN", jsx: (<span>SIN</span>)},
+   {text: "ASIN", jsx: (<span>ASIN</span>)}], 
+  [{text: "COS", jsx: (<span>COS</span>)},
+   {text: "ACOS", jsx: (<span>ACOS</span>)}], 
+  [{text: "TAN", jsx: (<span>TAN</span>)},
+   {text: "ATAN", jsx: (<span>ATAN</span>)}], 
+  'EXP',
+  [{text: "pow", jsx: pow}], 
+  '√',
+  [{text: "X2", jsx: <span>x<sup><small>2</small></sup></span>}] ,
+  'LN',
+  'LOG',
+  '1/x'
 ];
